@@ -12,7 +12,7 @@ function App() {
     };
 
     fetch(
-      'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyAkeAN0mlsRYcPfmK1HBZf-8SpxE4oSyYE',
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
       requestOptions
     )
       .then(response => response.json())
